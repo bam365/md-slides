@@ -1,0 +1,1 @@
+type slides = string list

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.slideshow {
+    background: #afafaf;
+    width: 100vw;
+    height: 100vh;
+    font-size: 3.5vh;
+}
+
+.slide-controls {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.slide {
+    background: #fff;
+    width: 100vw; 
+    height: 75vw; 
+    padding: 4vh;
+    max-height: 100vh;
+    max-width: 133.33vh; 
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.slide-inner {
+
+h1, h2, h3 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: inside;
+}

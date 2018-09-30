@@ -1,0 +1,36 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "bsb -make-world",
+        "start": "bsb -make-world -w",
+        "clean": "bsb -clean-world",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "parcel": "parcel watch -d build -o Index.js lib/js/src/Index.bs.js",
+        "webpack": "webpack -w",
+        "webpack:production": "NODE_ENV=production webpack"
+    },
+    "keywords": [
+        "BuckleScript"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@glennsl/bs-json": "^3.0.0",
+        "bs-abstract": "^0.16.0",
+        "bs-fetch": "^0.3.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "reason-react": ">=0.4.0"
+    },
+    "devDependencies": {
+        "bs-platform": "^4.0.5",
+        "parcel-bundler": "^1.9.7",
+        "ppx_let": "github:andreypopp/ppx_let",
+        "webpack": "^4.0.1",
+        "webpack-cli": "^2.0.10"
+    },
+    "alias": {
+        "css": "./src/css"
+    }  
+}

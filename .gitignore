@@ -1,0 +1,6 @@
+frontend/.cache
+frontend/lib/js
+frontend/dist
+frontend/build
+*.cmi
+*.cmo
