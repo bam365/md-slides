@@ -1,0 +1,4 @@
+(library
+    (name mdslides)
+    (libraries containers containers_let mdslides_models omd toml)
+    (preprocess (pps ppx_jane)))

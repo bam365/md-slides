@@ -1,0 +1,4 @@
+title = "Hello"
+
+[slide]
+classes = [ "foo" ]

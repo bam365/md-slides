@@ -1,0 +1,5 @@
+(executable
+    (name md_slides_server)
+    (libraries containers containers_let mdslides mdslides_models opium)
+    (preprocess (pps ppx_jane)))
+
