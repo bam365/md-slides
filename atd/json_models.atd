@@ -1,0 +1,20 @@
+
+type slide_config = 
+    { ?title: string option
+    ; classes: string list
+    ; slide_classes: string list
+    }
+
+type presentation_config =
+    { ?title: string option
+    ; slide: slide_config
+    }
+
+type slide = 
+    { ?config: slide_config option
+    ; slide_body_html: string
+    }
+
+type slides = 
+    { slides: slide list
+    }

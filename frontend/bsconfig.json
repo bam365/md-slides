@@ -21,7 +21,8 @@
     "reason-react",
     "bs-abstract",
     "bs-fetch",
-    "@glennsl/bs-json"
+    "@glennsl/bs-json",
+    "@ahrefs/bs-atdgen-codec-runtime"
   ],
   "ppx-flags": [
       "ppx_let/ppx"

@@ -8,7 +8,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "parcel": "parcel watch -d build -o Index.js lib/js/src/Index.bs.js",
         "webpack": "webpack -w",
-        "webpack:production": "NODE_ENV=production webpack"
+        "webpack:production": "NODE_ENV=production webpack",
+        "atdgen": "atdgen -t ../atd/json_models.atd -o ./src/models/json_models &&  atdgen -bs ../atd/json_models.atd -o ./src/models/json_models"
     },
     "keywords": [
         "BuckleScript"
@@ -16,6 +17,7 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "@ahrefs/bs-atdgen-codec-runtime": "^1.0.5",
         "@glennsl/bs-json": "^3.0.0",
         "bs-abstract": "^0.16.0",
         "bs-fetch": "^0.3.0",
@@ -32,5 +34,5 @@
     },
     "alias": {
         "css": "./src/css"
-    }  
+    }
 }

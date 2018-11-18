@@ -1,0 +1,13 @@
+(library
+ (name mdslides_models_atd)
+ (libraries atdgen yojson))
+
+(rule
+ (targets json_models_j.ml json_models_j.mli)
+ (deps    json_models.atd)
+ (action  (run atdgen -j -j-std %{deps})))
+
+(rule
+ (targets json_models_t.ml json_models_t.mli)
+ (deps    json_models.atd)
+ (action  (run atdgen -t %{deps})))

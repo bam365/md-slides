@@ -15,5 +15,8 @@ let load_slides file = CCIO.with_in file begin fun channel ->
     channel
     |> CCIO.read_all
     |> split_fragments
-    |> List.map fragment_to_html
+    |> List.map Mdslides_models.Types.(fun frag -> 
+        { slide_body_html = fragment_to_html frag 
+        ; config = None (* TODO: load this *)
+        })
 end

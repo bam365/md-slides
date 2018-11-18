@@ -1,1 +1,1 @@
-val load_slides : string -> string list
+val load_slides : string -> Mdslides_models.Types.slide list

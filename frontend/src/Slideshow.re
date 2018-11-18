@@ -1,9 +1,10 @@
-open View
+open View;
+open Json_models_t;
 
 let component = ReasonReact.statelessComponent("Slideshow");
 
 let make = 
-    (~slides: Model.slides,
+    (~slides: list(Json_models_t.slide),
      ~currentSlide: int,
      ~requestSlide: (int) => unit,
      _children) 
@@ -17,7 +18,7 @@ let make =
                 currentSlide=(currentSlide)
                 requestSlide=(requestSlide) 
             >
-                <Slide html=slide></Slide>
+                <Slide html=(slide.slide_body_html)></Slide>
             </SlideOverlay>
         );
 

@@ -51,7 +51,7 @@ let json_response s =
     
 
 let api_slides = get "/api/slides" begin fun _ -> 
-    let  slides = Json_models_t.(
+    let  slides = Types.(
         { slides = SlideFile.load_slides slides_filename }
     ) in
     Json.string_of_slides slides

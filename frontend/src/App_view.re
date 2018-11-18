@@ -5,7 +5,7 @@ let root = (self: t) => (
     <SlideLoader
         render=(slides => 
             <Slideshow 
-                slides=slides 
+                slides=(slides.slides)
                 currentSlide=(self.state.currentSlide)
                 requestSlide=(Actions.setSlideViaUri)
             />

@@ -3,7 +3,7 @@ open View
 let component = ReasonReact.statelessComponent("SlideOverlay");
 
 let make = 
-    (~slides: Model.slides,
+    (~slides: list(Json_models_t.slide),
      ~currentSlide: int,
      ~requestSlide: (int) => unit,
      children: array(ReasonReact.reactElement)) 

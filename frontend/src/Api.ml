@@ -1,13 +1,13 @@
 open Util.Fun
 
-module JsonDecode = struct
-    open Json.Decode
-
-    let slides = field "slides" (list string) 
-end
-
-let fetchSlides () = 
+let get url decode =
     let open Js.Promise in
-    Fetch.fetch("/api/slides")
-    |> then_ Fetch.Response.json
-    |> then_ (JsonDecode.slides %> resolve)
+    Fetch.fetchWithInit
+      url
+      (Fetch.RequestInit.make ~method_:Get ())
+    |> then_ Fetch.Response.json 
+    |> then_ (fun json -> json |> decode |> resolve)
+
+open Json_models_bs
+
+let fetchSlides () = get "/api/slides" read_slides

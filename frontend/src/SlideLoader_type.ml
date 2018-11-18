@@ -2,11 +2,11 @@ module S = struct
     type state = 
         | NoSlides
         | LoadingSlides
-        | Slides of Model.slides 
+        | Slides of Json_models_t.slides 
 
     type action = 
         | FetchSlides 
-        | SlidesFetched of Model.slides
+        | SlidesFetched of Json_models_t.slides
 end
 
 include S

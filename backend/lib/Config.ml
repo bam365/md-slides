@@ -7,7 +7,7 @@ module TomlUtil = struct
         | None -> CCResult.Error("required field missing: " ^ fieldname)
 end
 *)
-open Mdslides_models.Json_models_t
+open Mdslides_models.Types
 
 module type S = sig
     type t

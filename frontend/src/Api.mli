@@ -1,5 +1,1 @@
-module JsonDecode : sig
-    val slides : Js.Json.t -> Model.slides
-end
-
-val fetchSlides : unit -> Model.slides Js.Promise.t
+val fetchSlides : unit -> Json_models_t.slides Js.Promise.t
